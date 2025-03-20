@@ -1,16 +1,27 @@
-import React from 'react'
+import React from "react";
+import { motion } from "framer-motion";
 
 function Hero() {
   return (
-    <div className="flex flex-col items-center text-center py-20 px-4">
-        <div className="w-24 h-24 rounded-full overflow-hidden border-2 border-gray-400">
-          <img src="/profile.jpg" alt="Profile" className="w-full h-full object-cover" />
-        </div>
-        <p className="mt-2 bg-white px-2 py-1 rounded-full shadow text-md">Your Name 👋</p>
-        <h1 className="text-md font-semibold mt-4">Building digital <span className="text-gray-800">products</span>, <span className="text-gray-800">brands</span>, and <span className="text-gray-800">experience</span>.</h1>
-        <button className="mt-6 px-6 py-2 bg-black text-white rounded-full hover:bg-gray-800">Latest Shots</button>
-      </div>
-  )
+    <div className="h-screen flex items-center justify-center px-6">
+      <motion.section
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        className="text-center"
+      >
+        <h1 className="text-4xl md:text-6xl font-extrabold text-white">
+          FRONT-END DEVELOPER
+        </h1>
+        <h2 className="mt-6 text-gray-400 text-lg md:text-2xl max-w-xl mx-auto leading-relaxed">
+          Hi, I'm <span className="text-white font-semibold">Lalit Sharma</span>,  
+          a front-end developer based in Hisar, Haryana. <br className="hidden md:block" />
+          Passionate about creating user-friendly and responsive web applications. <br />
+          Currently pursuing <span className="text-white font-semibold">Masters in Computer Applications</span>.
+        </h2>
+      </motion.section>
+    </div>
+  );
 }
 
-export default Hero
+export default Hero;
